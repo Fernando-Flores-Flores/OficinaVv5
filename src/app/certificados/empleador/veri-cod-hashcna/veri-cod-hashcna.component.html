@@ -1,0 +1,151 @@
+<app-navbar></app-navbar>>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container animate__animated animate__bounce">
+    <h2 class="line" style="margin-bottom: 30px">
+      <i class="fas fa-user-check ico"></i> VERIFICACION DE CÓDIGO HASH-CNA
+    </h2>
+  </div>
+</div>
+<div class="container contenedorBlanco">
+  <form action="">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 container tamano">
+          <div class="row align-items-center caja">
+            <div class="col-lg-3">
+              <label for="inputPassword6" class="col-form-label">Nombre entidad:</label>
+            </div>
+            <div class="col-lg-6">
+              <select class="form-select">
+                <option value="" selected disabled>Selecione un entidad</option>
+
+                <option [value]="item.value" *ngFor="let item of entidades">
+                  {{ item.entidad }}
+                </option>
+              </select>
+            </div>
+            <div class="col-lg-3">
+              <span id="" class="form-text"> Período (mes) en mora </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 container tamano">
+          <div class="row align-items-center caja">
+            <div class="row">
+              <div class="col-lg-3">
+                <label for="inputPassword6" class="col-form-label">Primer nombre
+                </label>
+              </div>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col-lg-3">
+                <span id="" class="form-text"> * datos necesarios </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3">
+                <label for="inputPassword6" class="col-form-label">Segundo nombre
+                </label>
+              </div>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col-lg-3">
+                <span id="" class="form-text"></span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3">
+                <label for="inputPassword6" class="col-form-label">Primer apellido
+                </label>
+              </div>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col-lg-3">
+                <span id="" class="form-text"> * datos necesarios </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3">
+                <label for="inputPassword6" class="col-form-label">Segundo apellido
+                </label>
+              </div>
+              <div class="col-lg-6">
+                <input type="text" class="form-control" />
+              </div>
+              <div class="col-lg-3">
+                <span id="" class="form-text"> </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6 container tamano">
+          <div class="row align-items-center caja">
+            <div class="col-lg-3">
+              <label for="inputPassword6" class="col-form-label">Correo electrónico
+              </label>
+            </div>
+            <div class="col-lg-6">
+              <input type="email" name="" id="" class="form-control" placeholder="example@gmail.com" />
+            </div>
+            <div class="col-lg-3">
+              <span id="" class="form-text">
+                Ingreso su correo electrónico
+              </span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 container tamano">
+          <div class="row align-items-center caja">
+            <div class="row">
+              <div class="col-lg-3">
+                <label for="inputPassword6" class="col-form-label">Número de certificación:
+                </label>
+              </div>
+              <div class="col-lg-6">
+                <input type="number" name="sumatoria" id="sum" class="form-control" />
+              </div>
+              <div class="col-lg-3">
+                <span id="" class="form-text">Ingrese su número de certificación
+                </span>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-lg-3">
+                <label for="inputPassword6" class="col-form-label">Código hash – CNA
+                </label>
+              </div>
+              <div class="col-lg-6">
+                <input type="number" name="sumatoria" id="sum" class="form-control" />
+              </div>
+              <div class="col-lg-3">
+                <span id="" class="form-text">Ingrese su número de certificación
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="row btnA">
+        <div class="col-sm-6">
+          <button class="botonF">
+            <i class="fas fa-calculator"></i>
+            Verificar código
+          </button>
+        </div>
+        <div class="col-sm-6">
+          <button type="reset" class="botonF">
+            <!-- (click)="guardarDatosEmpleador($event)" -->
+            <i class="fas fa-home"></i>
+            Inicio
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

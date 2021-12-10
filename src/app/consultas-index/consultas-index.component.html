@@ -1,0 +1,336 @@
+<app-navbar></app-navbar>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container animate__animated animate__bounce">
+    <h2 class="line" style="margin-bottom: 30px"><img src="../../assets/logos/LogoConsultas.png"
+        class="imgLogo" />CONSULTAS</h2>
+  </div>
+</div>
+<!--Banner-->
+<div class="container" style="margin-bottom: 30px">
+  <div class="row">
+    <div class="col-lg-6">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../../assets/carrusel/imgbaner3.jpg" class="d-block w-100" alt="" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>titulo</h5>
+              <p>Titulo 1</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/carrusel/imgbaner2.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Titulo 2</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/carrusel/imgbaner1.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Titulo 3</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+    <div class="col-lg-6 desaparecer">
+      <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+            aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+            aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+            aria-label="Slide 3"></button>
+        </div>
+
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="../../assets/carrusel/imgbaner1.jpg" class="d-block w-100" alt="" />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>titulo</h5>
+              <p>Titulo 1</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/carrusel/imgbaner3.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>Titulo 3</p>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/carrusel/imgbaner2.jpg" class="d-block w-100" alt="..." />
+            <div class="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>Titulo 2</p>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+          data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--Botonoes-->
+<div class="container">
+  <div class="tab">
+    <button class="tablinks active" onclick="verticalNav(event, 'solGes')" id="defaultOpen" active="true">
+      <i class="fas fa-ticket-alt"></i> Boletas
+    </button>
+    <button class="tablinks" onclick="verticalNav(event, 'solCon')">
+      <i class="fas fa-calculator"></i> Cálculo de liquidación por mora
+    </button>
+    <button class="tablinks" onclick="verticalNav(event, 'solIngRec')">
+      <i class="fas fa-calculator"></i> Cálculo de liquidación
+    </button>
+  </div>
+  <!--Parte 1-->
+
+  <div id="solGes" class="tabcontent">
+    <h3 class="subtitulo">Boletas de recuperación de Gastos Judiciales.</h3>
+  </div>
+
+  <!--Parte 2 Cálculo de liquidación por mora -->
+  <div id="solCon" class="tabcontent" style="display: none">
+    <h3 class="subtitulo">
+      CÁLCULO DEL INTERES POR MORA
+    </h3>
+    <form action="">
+      <div class="container tamano">
+        <div class="row align-items-center caja">
+          <div class="col-lg-3">
+            <label for="inputPassword6" class="col-form-label">Periodo de cotización</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="month" name="fecha" id="fecha" class="form-control" placeholder="año - mes" />
+          </div>
+          <div class="col-lg-3">
+            <span id="" class="form-text"> Período (mes) en mora </span>
+          </div>
+        </div>
+      </div>
+      <div class="container tamano">
+        <div class="row align-items-center caja">
+          <div class="col-lg-3">
+            <label for="inputPassword6" class="col-form-label">Fecha de pago
+            </label>
+          </div>
+          <div class="col-lg-6">
+            <input type="date" name="fecha" id="fecha" class="form-control" placeholder="2021-11-30" />
+          </div>
+          <div class="col-lg-3">
+            <span id="" class="form-text">
+              Es la fecha en la cual se realizará el pago de las contribuciones.
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="container tamano">
+        <div class="row align-items-center caja">
+          <div class="col-lg-3">
+            <label for="inputPassword6" class="col-form-label">Calcular con:
+            </label>
+          </div>
+          <div class="col-lg-6">
+            <select class="form-select">
+              <option selected disabled>Selecione</option>
+              <option value="1">Total ganado</option>
+              <option value="2">Sub total primas y contribuciones</option>
+            </select>
+          </div>
+          <div class="col-lg-3">
+            <span id="" class="form-text">
+              Se podrá elegir si el calculo de interes sera con ...
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="container tamano">
+        <div class="row align-items-center caja">
+          <div class="col-lg-3">
+            <label for="inputPassword6" class="col-form-label">
+              ¿Es minero?
+            </label>
+          </div>
+          <div class="col-lg-6">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                value="option1" />
+              <label class="form-check-label" for="inlineRadio1">SI</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                value="option2" />
+              <label class="form-check-label" for="inlineRadio2">NO</label>
+            </div>
+          </div>
+          <div class="col-lg-3">
+            <span id="" class="form-text"> </span>
+          </div>
+        </div>
+      </div>
+      <div class="container tamano">
+        <div class="row align-items-center caja">
+          <div class="col-lg-3">
+            <label for="inputPassword6" class="col-form-label">Sumatoria total</label>
+          </div>
+          <div class="col-lg-6">
+            <input type="number" name="sumatoria" id="sum" class="form-control" />
+          </div>
+          <div class="col-lg-3">
+            <span id="" class="form-text">Sumatoria total ganado dependiente
+            </span>
+          </div>
+        </div>
+      </div>
+      <div class="row btnA">
+        <div class="col-sm-6">
+          <button class="botonF">
+            <!-- (click)="guardarDatosEmpleador($event)" -->
+            <i class="fas fa-calculator"></i>
+            Calcular
+          </button>
+
+        </div>
+        <div class="col-sm-6">
+          <button type="reset" class="botonF">
+            <!-- (click)="guardarDatosEmpleador($event)" -->
+            <i class="fas fa-eraser"></i>
+            Limpiar
+          </button>
+        </div>
+
+      </div>
+    </form>
+
+    <div class="container" style="margin-bottom: 20px">
+      <h5 class="subtitulo">
+        <i class="fas fa-calculator"></i> Cálculo de liquidación por Mora
+      </h5>
+      <div class="row">
+        <div class="col-lg-5">
+          <table class="table tablas">
+            <thead class="tituloTabla">
+              <tr>
+                <th scope="col-6">Descripción</th>
+                <th scope="col-6">Valor</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Periodo</td>
+                <td>2015</td>
+              </tr>
+              <tr>
+                <td>Fecha de vencimiento</td>
+                <td>28/02/2015</td>
+              </tr>
+              <tr>
+                <td>Fecha de pago</td>
+                <td>10/11/2021</td>
+              </tr>
+              <tr>
+                <td>Dias de atraso</td>
+                <td>2,447</td>
+              </tr>
+              <tr>
+                <td>Tasa de interés</td>
+                <td>7.52%</td>
+              </tr>
+              <tr>
+                <td>Sumatoria total ganado</td>
+                <td>20,000.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="col-lg-7">
+          <table class="table tablas">
+            <thead class="tituloTabla">
+              <tr>
+                <th scope="col">Detalles</th>
+                <th scope="col">SSO (13,92%)</th>
+                <th scope="col">AS*(3.5%)</th>
+                <th scope="col">Provivienda Patronal</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monto declaro</td>
+                <td>2.784</td>
+                <td>700.00</td>
+                <td>400.00</td>
+              </tr>
+              <tr>
+                <td>Interes por mora</td>
+                <td>1,432.52</td>
+                <td>357.93</td>
+                <td>204.53</td>
+              </tr>
+              <tr>
+                <td>Interés incremental</td>
+                <td>284.70</td>
+                <td>71.59</td>
+                <td>40.91</td>
+              </tr>
+              <tr>
+                <td>Total a pagar</td>
+                <td>4,492</td>
+                <td>1,129.52</td>
+                <td>645.44</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--Parte 3 Cálculo de liquidacion-->
+  <div id="solIngRec" class="tabcontent" style="display: none">
+    <h3 class="subtitulo"> <i class="fas fa-calculator"></i> CALCULO LIQUIDACIÓN</h3>
+    <object data="../../assets/PDFs/calculoliquidacion.pdf" id="pdf" type="application/pdf" class="pdfview"></object>
+
+    <div class="row btnA">
+      <div class="col-sm-6">
+        <a class="botonF" href="../../assets/PDFs/calculoliquidacion.pdf" download="documento" style="text-decoration: none;" >
+          <i class="fas fa-file-pdf"></i> Descargar PDF
+        </a>
+      </div>
+      <div class="col-sm-6">
+        <a class="botonF" (click)="redirigir('asegurado')" style="text-decoration: none;">
+          <i class="fas fa-home"></i>Inicio
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</div>

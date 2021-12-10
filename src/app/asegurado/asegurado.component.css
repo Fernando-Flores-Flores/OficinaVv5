@@ -1,0 +1,44 @@
+/* body{
+  background-image: url("../../assets/banner/fondoMovil.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+}  */
+
+.carousel-item img{
+    height: 300px;
+    max-width: 90%;
+    border-radius: 10px;
+    margin: auto;
+
+    }
+.carousel{
+    height: 300px;
+    width: 90%;
+    margin: auto;
+    border: 1px solid rgb(18, 212, 247);
+    
+    border-radius: 10px;
+
+}
+.carousel-control-prev, .carousel-control-next{
+    width: 30px;
+    background: rgba(0, 255, 255, 0.527);
+}
+/* @media screen and (max-width: 700px) {
+    .carousel-item img{
+        max-width: 90%;
+        height: 200px;
+        border-radius: 10px;
+        margin: auto;
+  
+    } 
+    .carousel{
+        height: 202px;
+        width: 95%;
+        margin: auto;
+        border-radius: 10px;
+    
+    }
+} */

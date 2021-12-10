@@ -1,0 +1,164 @@
+<app-navbar></app-navbar>
+<div class="container animate__animated animate__fadeIn">
+  <div class="row">
+    <div class="col-md-12">
+      <div class="animate__animated animate__bounce">
+        <h2 class="line">
+          <img
+            src="../../../../assets/logos/LogoCertificacion.png"
+            class="imgLogo"
+          />CERTIFICADO DE NO ADEUDO DE EMPRESA NO REGISTRADA
+        </h2>
+      </div>
+      <br />
+    </div>
+  </div>
+  <div class="container contenedorBlanco">
+    <section class="">
+      <div class="row animate__animated animate__backInLeft animate__delay-1s">
+        <label for="" class="label">
+          <img
+            class="imgLogo"
+            src="../../../../assets/logos/logoPasos.png"
+            alt="No se encontro el icono"
+          />
+          Para generar su certificado rellenar el siguiente campo
+        </label>
+      </div>
+    </section>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="form-group caja">
+          <label> Tipo de identificación</label>
+          <br />
+
+          <div class="row">
+            <div class="col-lg-3">
+              <div class="form-check">
+                <label class="form-check-label" for="nit">NIT</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tipoIdentificacion"
+                  id="nit"
+                  value="nit"
+                />
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-check">
+                <label class="form-check-label" for="SUP">SUP</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tipoIdentificacion"
+                  id="SUP"
+                  value="SUP"
+                />
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-check">
+                <label class="form-check-label" for="gob">GOB</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tipoIdentificacion"
+                  id="gob"
+                  value="GOB"
+                />
+              </div>
+            </div>
+            <div class="col-lg-3">
+              <div class="form-check">
+                <label class="form-check-label" for="gob">RUC</label>
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="tipoIdentificacion"
+                  id="RUC"
+                  value="RUC"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4">
+        <div class="form-group caja">
+          <label> Nro. de identificación</label>
+          <br />
+          <input type="number" class="form-control" />
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="form-group caja">
+          <label> Departamento o regional</label>
+          <br />
+          <select class="form-select">
+            <option value="" selected disabled>
+              Selecione un departamento o regional
+            </option>
+            <option [value]="item.valor" *ngFor="let item of departamentos">
+              {{ item.depto }}
+            </option>
+          </select>
+        </div>
+      </div>
+    </div>
+    <br />
+    <div class="container" [hidden]="mostrar">
+      <div class="row animate__animated animate__backInLeft animate__delay-1s">
+        <div class="col">
+          <section class="">
+            <div class="row">
+              <label for="" class="label">
+                <i class="fas fa-building"></i>
+                Empresa NO registrada en el Seguro Integral de Pensiones (SIP),
+                agregue los siguientes datos
+              </label>
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="form-group caja">
+            <label> Razón social:</label>
+            <br />
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+        <br />
+        <div class="col-lg-6">
+          <div class="form-group caja">
+            <label> Representante legal</label>
+            <br />
+            <input type="text" class="form-control" />
+          </div>
+        </div>
+      </div>
+    </div>
+    <br /><br />
+    <div class="row" [hidden]="mostrarCet">
+      <app-gen-cert></app-gen-cert>
+    </div>
+
+    <div class="row btnA">
+      <div class="col-sm-6">
+        <button class="botonF" (click)="mostrarCampos()">
+          <i class="far fa-address-card"></i>
+          GENERAR CERTIFICADO
+        </button>
+      </div>
+      <div class="col-sm-6">
+        <button type="reset" class="botonF">
+          <!-- (click)="guardarDatosEmpleador($event)" -->
+          <i class="fas fa-home"></i>
+          Inicio
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

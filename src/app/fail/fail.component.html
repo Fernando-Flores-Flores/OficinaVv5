@@ -1,0 +1,660 @@
+<app-navbar></app-navbar>
+<div class="jumbotron jumbotron-fluid">
+  <div class="container animate__animated animate__bounce">
+    <h2 class="display-6">FORMULARIO DE REGISTRO EMPLEADOR</h2>
+    <p class="lead h3">SISTEMA INTEGRAL DE PENSIONES - SIP</p>
+  </div>
+  <br /><br />
+</div>
+
+<div class="container">
+  <div class="row">
+    <div>
+      <!--Pasos giratorios-->
+      <!-- <section class="margen">
+        <div
+          class="row animate__animated animate__backInLeft animate__delay-1s"
+        >
+          <label for="" class="label">
+            <img
+              class="imgLogo"
+              src="../../assets/logos/logoPasos.png"
+              alt="No se encontro el icono"
+            />
+            Siga los siguientes pasos para realizar su registro :-
+          </label>
+        </div>
+
+        <div class="wrap animate__animated animate__backInRight">
+          <div class="tarjeta-wrap">
+            <div class="tarjeta">
+              <div class="adelante card1b"></div>
+              <div class="atras card1"></div>
+            </div>
+          </div>
+          <div class="tarjeta-wrap">
+            <div class="tarjeta">
+              <div class="adelante card2b"></div>
+              <div class="atras card2"></div>
+            </div>
+          </div>
+          <div class="tarjeta-wrap">
+            <div class="tarjeta">
+              <div class="adelante card3b"></div>
+              <div class="atras card3"></div>
+            </div>
+          </div>
+          <div class="tarjeta-wrap">
+            <div class="tarjeta">
+              <div class="adelante card4b"></div>
+              <div class="atras card4"></div>
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!--Inicio Tarjeta DIV-->
+      <!--Formulario Paso 1 Información del empleador-->
+
+      <form [formGroup]="empleadorFormControler" (ngSubmit)="onSubmit()">
+        <div id="paso1">
+          <div class="cont">
+            <p class="subtitulo">Identificación del empleador</p>
+          </div>
+          <div class="cajaBlanca">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo">Tipo declaración</label>
+                  <div class="labelFormContenido">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoDeclaracion"
+                        id="flexRadioDefault1"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Inscripción
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoDeclaracion"
+                        id="flexRadioDefault2"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Actualización de datos
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Lugar de declaración</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Ciudad donde se presenta"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Fecha de declaración :</label
+                  >
+                  <input type="date" class="form-control" />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Tipo de empleador</label
+                  >
+                  <div class="labelFormContenido">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoEmpleador"
+                        id="flexRadioDefault1"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Con dependientes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoEmpleador"
+                        id="flexRadioDefault2"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Sin dependientes
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo">Oficina</label>
+                  <div class="labelFormContenido">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="oficina"
+                        id="flexRadioDefault1"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Casa Matriz
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="oficina"
+                        id="flexRadioDefault2"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Sucursal
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Tipo de identificación</label
+                  >
+                  <div class="labelFormContenido">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option value="1">NIT</option>
+                      <option value="2">SUP</option>
+                      <option value="3">GOB</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Número de identificación</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id=""
+                    placeholder="Nro. IdentificaciónF"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Código unidad ejecutora</label
+                  >
+                  <div class="labelFormContenido">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      placeholder="Código"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Fecha inicio actividades :</label
+                  >
+                  <input type="date" class="form-control" />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Nombres y apellidos o razón social</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Nom. Ape. , Razón Social"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo">Rótulo comercial</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Nom. Ape. , Razón Social"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo">Tipo empresa</label>
+                  <div class="labelFormContenido">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoEmpresa"
+                        id="flexRadioDefault1"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Pública
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoEmpresa"
+                        id="flexRadioDefault2"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Privada
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Matrícula de comercio</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Matrícula"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Sociedad comercial</label
+                  >
+                  <select class="form-select">
+                    <option value="0">Empresa Unipersona</option>
+                    <option value="1">Sociedad Colectiva</option>
+                    <option value="2">Sociedad en Comandita Simple</option>
+                    <option value="3">
+                      Sociedad de Responsabilidad Limitada
+                    </option>
+                    <option value="4">Sociedad Anónima</option>
+                    <option value="5">
+                      Sociedad en Comandita por Acciones
+                    </option>
+                    <option value="6">
+                      Asociación Accidental o de Cuentas
+                    </option>
+                    <option value="7">Sociedad de Economía Mixta</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Actividad principal de la empresa {{this.empleadorFormControler.get('rubro')?.value}}
+                  </label>
+
+                  <select
+                    formControlName="rubro"
+                    class="form-select"
+                    (change)="enCambio()"
+                  > 
+                    <option value="nulo">Rubro Comercial</option>
+                    <option *ngFor="let rub of rubros">{{ rub }}</option>
+                  </select>
+                  <br />
+                  <select class="form-select" formControlName="codact">
+                    
+                    <option  *ngFor="let opt of opciones" value="{{opt.value}}">{{opt.act}}</option>
+                  
+                  </select>
+                 
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Nro. Trabajadores</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id=""
+                    placeholder="Nro"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <br /><br />
+        <div id="paso2" class="">
+          <div class="cont">
+            <div class="subtitulo">Datos del domicilio del empleador</div>
+          </div>
+          <div class="cajaBlanca">
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo">Tipo declaración</label>
+                  <div class="labelFormContenido">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoDeclaracion"
+                        id="flexRadioDefault1"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Inscripción
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoDeclaracion"
+                        id="flexRadioDefault2"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Actualización de datos
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Lugar de declaración</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Lugar de declaración"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Fecha de declaración :</label
+                  >
+                  <input type="date" class="form-control" />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Tipo de empleador</label
+                  >
+                  <div class="labelFormContenido">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoEmpleador"
+                        id="flexRadioDefault1"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Con dependientes
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoEmpleador"
+                        id="flexRadioDefault2"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Sin dependientes
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo">Oficina</label>
+                  <div class="labelFormContenido">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="oficina"
+                        id="flexRadioDefault1"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Casa Matriz
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="oficina"
+                        id="flexRadioDefault2"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Sucursal
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Tipo de identificación</label
+                  >
+                  <div class="labelFormContenido">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>Tipo identificación</option>
+                      <option value="1">NIT</option>
+                      <option value="2">SUP</option>
+                      <option value="3">GOB</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Número de identificación</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id=""
+                    placeholder="Nro. IdentificaciónF"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Código unidad ejecutora</label
+                  >
+                  <div class="labelFormContenido">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id=""
+                      placeholder="Código"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Fecha inicio actividades :</label
+                  >
+                  <input type="date" class="form-control" />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Nombres y apellidos o razón social</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Nom. Ape. , Razón Social"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo">Rótulo comercial</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Nom. Ape. , Razón Social"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <!-- <div class="form-group caja">
+                <label for="" class="labelFormTitulo"
+                  >Tipo de empresa</label
+                >
+                <div class="labelFormContenido">
+                  <select class="form-select" aria-label="Default select example">
+                    <option selected>Tipo de empresa</option>
+                    <option value="1">Pública</option>
+                    <option value="2">Privada</option>
+                  </select>
+                </div>
+              </div> -->
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo">Tipo empresa</label>
+                  <div class="labelFormContenido">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoEmpresa"
+                        id="flexRadioDefault1"
+                        checked
+                      />
+                      <label class="form-check-label" for="flexRadioDefault1">
+                        Pública
+                      </label>
+                    </div>
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="radio"
+                        name="tipoEmpresa"
+                        id="flexRadioDefault2"
+                      />
+                      <label class="form-check-label" for="flexRadioDefault2">
+                        Privada
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Matrícula comercio</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Matrícula"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Sociedad comercial</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Sociedad comercial"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Actividad Principal de la empresa</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id=""
+                    placeholder="Actividad Principal"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="labelFormTitulo"
+                    >Nro. Trabajadores</label
+                  >
+                  <input
+                    type="number"
+                    class="form-control"
+                    id=""
+                    placeholder="Nro"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

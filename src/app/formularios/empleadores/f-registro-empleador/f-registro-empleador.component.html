@@ -1,0 +1,1096 @@
+<app-navbar></app-navbar>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container animate__animated animate__bounce">
+    <h2 class="line">FORMULARIO DE REGISTRO EMPLEADORES</h2>
+    <br><br>
+    <p class="lead h2">SISTEMA INTEGRAL DE PENSIONES - SIP</p>
+  <br>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <section class="">
+        <div
+          class="row animate__animated animate__backInLeft animate__delay-1s"
+        >
+          <label for="" class="label">
+            <img
+              class="imgLogo"
+              src="../../assets/logos/logoPasos.png"
+              alt="No se encontro el icono"
+            />
+            Siga los siguientes pasos para realizar su registro
+          </label>
+        </div>
+      </section>
+
+      <form
+        [formGroup]="formEmp"
+        (ngSubmit)="guardarDatosEmpleador($event)"
+        class="needs-validation"
+        novalidate
+      >
+        <!--Paso 1 Identificacion del empleador-->
+
+        <div id="paso1" class="cajaBlanca animate__animated animate__fadeInUp">
+          <div class="row">
+            <div class="row titulo" style="margin-bottom: 10px">
+              <div class="col-md-2">
+                <img
+                  src="../../../../assets/PasosForms/paso1.png"
+                  class="imgPasos"
+                  alt="no se encontro la imagen"
+                />
+              </div>
+
+              <div class="col-md-10">
+                <p class="">Identificacion del Empleador</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div
+                class="form-group caja"
+                [class.is-success]="tipoDeclaracionValido"
+                [class.is-danger]="tipoDeclaracionInvalido"
+              >
+                <label> Tipo declaración</label>
+                <br />
+
+                <div class="form-check">
+                  <label class="form-check-label" for="inscripcion"
+                    >Incripcion</label
+                  >
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tipoDeclaracion"
+                    id="inscripcion"
+                    value="Inscripción"
+                    formControlName="tipoDeclaracion"
+                  />
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="actualizacion"
+                    >Actualización de datos</label
+                  >
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tipoDeclaracion"
+                    id="actualizacion"
+                    value="actualizacion"
+                    formControlName="tipoDeclaracion"
+                  />
+                </div>
+
+                <small *ngIf="tipoDeclaracionInvalido" class="rojo"
+                  >* Es necesario elegir un campo</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label> Lugar de declaracion</label>
+                <br />
+                <input
+                  type="text"
+                  class="form-control"
+                  [class.is-success]="lugarDeclaracionValido"
+                  [class.is-danger]="lugarDeclaracionInvalido"
+                  id=""
+                  placeholder="Lugar de declaración"
+                  formControlName="lugarDeclaracion"
+                  name="lugarDeclaracion"
+                />
+                <small *ngIf="lugarDeclaracionInvalido" class="rojo"
+                  >* Es necesario elegir un campo</small
+                >
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Fecha de declaracion :</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  [class.is-success]="fechaDeclaracionValido"
+                  [class.is-danger]="fechaDeclaracionInvalido"
+                  formControlName="fechaDeclaracion"
+                />
+                <small *ngIf="fechaDeclaracionInvalido" class="rojo"
+                  >* Este campo es requerido</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Oficina</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [class.is-success]="oficinaValido"
+                  [class.is-danger]="oficinaInvalido"
+                  id=""
+                  placeholder="Oficina"
+                  formControlName="oficina"
+                />
+                <p>{{ oficinaValido }}</p>
+                <small *ngIf="oficinaInvalido" class="rojo"
+                  >* Es necesario llenar este campo</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Tipo de identificación</label>
+                <div class="form-check">
+                  <label class="form-check-label" for="tipoIdentificacion"
+                    >CON DEPENDIENTES</label
+                  >
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tipoIdentificacion"
+                    id="tipoIdentificacion"
+                    value="Con dependientes"
+                    formControlName="tipoIdentificacion"
+                  />
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="sindependientes"
+                    >SIN DEPENDIENTES</label
+                  >
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="tipoIdentificacion"
+                    id="sindependientes"
+                    value="Sin dependientes"
+                    formControlName="tipoIdentificacion"
+                  />
+                </div>
+                <small *ngIf="tipoIdentificacionInvalido" class="rojo"
+                  >* Es necesario llenar este campo</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="nroIdentificacion" class=""
+                  >Nro de Identificacion</label
+                >
+                <input
+                  type="number"
+                  class="form-control"
+                  [class.is-success]="nroIdentificacionValido"
+                  [class.is-danger]="nroIdentificacionInvalido"
+                  id="nroIdentificacion"
+                  placeholder="Nro"
+                  formControlName="nroIdentificacion"
+                />
+                <small *ngIf="nroIdentificacionInvalido" class="rojo"
+                  >* Es necesario llenar este campo</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Codigo Unidad Ejecutora</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [class.is-success]="codigoUnidadEjecutoraValido"
+                  [class.is-danger]="codigoUnidadEjecutoraInvalido"
+                  id=""
+                  placeholder="Código unidad ejecutora"
+                  formControlName="codigoUnidadEjecutora"
+                />
+                <small *ngIf="codigoUnidadEjecutoraInvalido" class="rojo"
+                  >* Es necesario llenar este campo</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Fecha de inicio de actividades:</label>
+                <input
+                  type="date"
+                  class="form-control"
+                  [class.is-success]="fechaInicioActividadesValido"
+                  [class.is-danger]="fechaInicioActividadesInvalido"
+                  formControlName="fechaInicioActividades"
+                />
+                <small *ngIf="fechaInicioActividadesInvalido" class="rojo"
+                  >* Este campo es requerido</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Nombre y apellido o razon social</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [class.is-success]="nomApeoRazonSocialValido"
+                  [class.is-danger]="nomApeoRazonSocialInvalido"
+                  formControlName="nomApeoRazonSocial"
+                />
+                <small *ngIf="nomApeoRazonSocialInvalido" class="rojo"
+                  >* Este campo es requerido</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Rotulo comercial</label>
+                <input
+                  class="form-control"
+                  type="text"
+                  [class.is-success]="rotuloComercialValido"
+                  [class.is-danger]="rotuloComercialInvalido"
+                  formControlName="rotuloComercial"
+                />
+                <small *ngIf="rotuloComercialInvalido" class="rojo"
+                  >* Este campo es requerido</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Tipo empresa</label>
+                <select
+                  class="form-select"
+                  [class.is-success]="tipoEmpresaValido"
+                  [class.is-danger]="tipoEmpresaInvalido"
+                  formControlName="tipoEmpresa"
+                >
+                  <option selected disabled>Seleccione:</option>
+                  <option value="publica">Publica</option>
+                  <option value="privada">Privada</option>
+                </select>
+                <small *ngIf="tipoEmpresaInvalido" class="rojo"
+                  >* Este campo es requerido</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Matricula de comercio</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [class.is-success]="matriculaComercioValido"
+                  [class.is-danger]="matriculaComercioInvalido"
+                  id=""
+                  placeholder="matriculaComercio"
+                  formControlName="matriculaComercio"
+                />
+                <small *ngIf="matriculaComercioInvalido" class="rojo"
+                  >* Este campo es requerido</small
+                >
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Sociedad comercial :</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [class.is-success]="sociedadComercialValido"
+                  [class.is-danger]="sociedadComercialInvalido"
+                  id=""
+                  placeholder="sociedadComercial"
+                  formControlName="sociedadComercial"
+                />
+                <small *ngIf="sociedadComercialInvalido" class="rojo"
+                  >* Este campo es requerido</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Actividad principal de la empresa</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  [class.is-success]="actividadEmpresaValido"
+                  [class.is-danger]="actividadEmpresaInvalido"
+                  id=""
+                  placeholder="Activiad principal"
+                  formControlName="actividadEmpresa"
+                />
+                <small *ngIf="actividadEmpresaInvalido" class="rojo"
+                  >* Este campo es requerido</small
+                >
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Nro. Trabajadores</label>
+                <input
+                  type="number"
+                  class="form-control"
+                  [class.is-success]="nroTrabajadoresValido"
+                  [class.is-danger]="nroTrabajadoresInvalido"
+                  id=""
+                  placeholder="0"
+                  formControlName="nroTrabajadores"
+                />
+                <small *ngIf="nroTrabajadoresInvalido" class="rojo"
+                  >* Este campo es requerido</small
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Paso 2 Datos laboraleso-->
+        <div id="paso2" class="cajaBlanca">
+          <div class="row">
+            <div class="row titulo">
+              <div class="col-2">
+                <img
+                  src="../../../../assets/PasosForms/paso2.png"
+                  class="imgPasos"
+                  alt="no se encontro la imagen"
+                />
+              </div>
+              <div class="col-10">
+                <p class="">Datos del domicilio empleador</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="envioCorrespondenciaValido"
+                  [class.is-danger]="envioCorrespondenciaInvalido"
+                >
+                  <label> Envio de correspondencia</label>
+                  <br />
+
+                  <div class="form-check">
+                    <label class="form-check-label" for="centralizada"
+                      >Centralizada</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="envioCorrespondencia"
+                      id="centralizada"
+                      value="centralizada"
+                      formControlName="envioCorrespondencia"
+                    />
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label" for="sucursal"
+                      >Por sucursal</label
+                    >
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="envioCorrespondencia"
+                      id="sucursal"
+                      value="sucursal"
+                      formControlName="envioCorrespondencia"
+                    />
+                  </div>
+
+                  <small *ngIf="envioCorrespondenciaInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Departamento</label>
+                  <select
+                    class="form-select"
+                    [class.is-success]="departamentoValido"
+                    [class.is-danger]="departamentoInvalido"
+                    formControlName="departamento"
+                  >
+                    <option selected disabled>Seleccione:</option>
+                    <option value="LaPaz">La Paz</option>
+                    <option value="Oruro">Oruro</option>
+                    <option value="Potosi">Potosi</option>
+                    <option value="Cochabamba">Cochabamba</option>
+                    <option value="Chuquisaca">Chuquisaca</option>
+                    <option value="Tarija">Tarija</option>
+                    <option value="SantaCruz">Santa Cruz</option>
+                    <option value="Beni">Beni</option>
+                    <option value="Pando">Pando</option>
+                  </select>
+                  <small *ngIf="departamentoInvalido" class="rojo"
+                    >* Este campo es requerido</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Provincia</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="provinciaRepValido"
+                    [class.is-danger]="provinciaRepInvalido"
+                    formControlName="provinciaRep"
+                  />
+                  <small *ngIf="provinciaRepInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="ciudadValido"
+                  [class.is-danger]="ciudadInvalido"
+                >
+                  <label> Pertenece al ciudad</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="ciudad"
+                    id="ciudad"
+                    formControlName="ciudad"
+                  />
+                  <small *ngIf="ciudadInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label> Zona o Barrio</label>
+                  <br />
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="zonaBarrioRepValido"
+                    [class.is-danger]="zonaBarrioRepInvalido"
+                    id=""
+                    placeholder="Zona o barrio"
+                    formControlName="zonaBarrioRep"
+                    name="zonaBarrioRep"
+                  />
+                  <small *ngIf="zonaBarrioRepInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label> Dirección</label>
+                  <br />
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="direccionValido"
+                    [class.is-danger]="direccionInvalido"
+                    id=""
+                    placeholder="Dirección"
+                    formControlName="direccion"
+                    name="direccion"
+                  />
+                  <small *ngIf="direccionInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class=""> Nro.Vivienda</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    [class.is-success]="nroViviendaRepValido"
+                    [class.is-danger]="nroViviendaRepInvalido"
+                    formControlName="nroViviendaRep"
+                  />
+                  <small *ngIf="nroViviendaRepInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="referenciaValido"
+                  [class.is-danger]="referenciaInvalido"
+                >
+                  <label> Referencia</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="referencia"
+                    id="referencia"
+                    formControlName="referencia"
+                  />
+                  <small *ngIf="referenciaInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="telefonoValido"
+                  [class.is-danger]="telefonoInvalido"
+                >
+                  <label> Telefono</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="telefono"
+                    id="telefono"
+                    formControlName="telefono"
+                  />
+                </div>
+                <small *ngIf="telefonoInvalido" class="rojo"
+                  >* Es necesario elegir un campo</small
+                >
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="celularValido"
+                  [class.is-danger]="celularInvalido"
+                >
+                  <label> Celular</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="celular"
+                    id="celular"
+                    formControlName="celular"
+                  />
+                </div>
+                <small *ngIf="celularInvalido" class="rojo"
+                  >* Es necesario elegir un campo</small
+                >
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Correo</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    [class.is-success]="correoValido"
+                    [class.is-danger]="correoInvalido"
+                    formControlName="correo"
+                  />
+                  <small *ngIf="correoInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--Paso 3 Representante legal-->
+        <div id="paso3" class="cajaBlanca">
+          <div class="row">
+            <div class="row titulo">
+              <div class="col-2">
+                <img
+                  src="../../../../assets/PasosForms/paso3.png"
+                  class="imgPasos"
+                  alt="no se encontro la imagen"
+                />
+              </div>
+              <div class="col-10">
+                <p class="">Datos del domicilio empleador</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="tipoDocIdentidadRValido"
+                  [class.is-danger]="tipoDocIdentidadRInvalido"
+                >
+                  <label> Tipo de documento de identidad:</label>
+                  <br />
+                  <div class="form-check">
+                    <label class="form-check-label" for="carnet">CI</label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tipoDocIdentidadR"
+                      id="carnet"
+                      value="carnet"
+                      formControlName="tipoDocIdentidadR"
+                    />
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label" for="pas">PAS</label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tipoDocIdentidadR"
+                      id="pas"
+                      value="pasaporte"
+                      formControlName="tipoDocIdentidadR"
+                    />
+                  </div>
+                  <div class="form-check">
+                    <label class="form-check-label" for="ce">CE</label>
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="tipoDocIdentidadR"
+                      id="ce"
+                      value="CE"
+                      formControlName="tipoDocIdentidadR"
+                    />
+                  </div>
+                  <small *ngIf="tipoDocIdentidadRInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">
+                    Numero de documento de identidad :</label
+                  >
+                  <div class="row">
+                    <div class="col-md-12 inlinee">
+                      <input
+                        type="number"
+                        class="form-control"
+                        [class.is-success]="nroDocIdentidadRValido"
+                        [class.is-danger]="nroDocIdentidadRInvalido"
+                        id=""
+                        placeholder="Nro de identificación"
+                        formControlName="nroDocIdentidadR"
+                      />
+
+                      <input
+                        type="text"
+                        class="form-control esp"
+                        [class.is-success]="complementoRValido"
+                        [class.is-danger]="complementoRInvalido"
+                        id=""
+                        placeholder="complemento"
+                        formControlName="complementoR"
+                      />
+                    </div>
+                    <small *ngIf="nroDocIdentidadRInvalido" class="rojo"
+                      >* Ingrese su numero de documento de identidad</small
+                    >
+                    <small *ngIf="complementoRInvalido" class="rojo"
+                      >* El campo debe tener minimo 2 caracteres</small
+                    >
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Primer nombre</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="priNombreValido"
+                    [class.is-danger]="priNombreInvalido"
+                    id=""
+                    placeholder="Primer nombre"
+                    formControlName="priNombre"
+                  />
+                  <p>{{ priNombreValido }}</p>
+                  <small *ngIf="priNombreInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Segundo nombre :</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="segNombreValido"
+                    [class.is-danger]="segNombreInvalido"
+                    id=""
+                    placeholder="Segundo nombre"
+                    formControlName="segNombre"
+                  />
+                  <small *ngIf="segNombreInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Primer Apellido :</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="priApellidoValido"
+                    [class.is-danger]="priApellidoInvalido"
+                    id=""
+                    placeholder="Primer Apellido"
+                    formControlName="priApellido"
+                  />
+                  <small *ngIf="priApellidoInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Segundo apellido :</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="segApellidoValido"
+                    [class.is-danger]="segApellidoInvalido"
+                    id=""
+                    placeholder="Segundo Apeliido"
+                    formControlName="segApellido"
+                  />
+                  <small *ngIf="segApellidoInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Apellido Casada :</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="apeCasadaValido"
+                    [class.is-danger]="apeCasadaInvalido"
+                    id=""
+                    placeholder="Ap. Casada"
+                    formControlName="apeCasada"
+                  />
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Departamento :</label>
+                  <select
+                    class="form-select"
+                    [class.is-success]="departamentoRepValido"
+                    [class.is-danger]="departamentoRepInvalido"
+                    aria-label="Default select example"
+                    formControlName="departamentoRep"
+                  >
+                    <option selected disabled>Seleccione:</option>
+                    <option value="1">La Paz</option>
+                    <option value="2">Oruro</option>
+                    <option value="3">Potosi</option>
+                    <option value="4">Cochabamba</option>
+                    <option value="5">Chuquisaca</option>
+                    <option value="6">Tarija</option>
+                    <option value="7">Pando</option>
+                    <option value="8">Santa Cruz</option>
+                    <option value="9">Beni</option>
+                  </select>
+                  <small *ngIf="departamentoRepInvalido" class="rojo"
+                    >* Este campo es requerido</small
+                  >
+                </div>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Provincia</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="provinciaValido"
+                    [class.is-danger]="provinciaInvalido"
+                    formControlName="provincia"
+                  />
+                  <small *ngIf="provinciaInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="ciudadRepValido"
+                  [class.is-danger]="ciudadRepInvalido"
+                >
+                  <label> Pertenece al ciudad</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="ciudadRep"
+                    id="ciudadRep"
+                    formControlName="ciudadRep"
+                  />
+                  <small *ngIf="ciudadRepInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label> Zona o Barrio</label>
+                  <br />
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="zonaBarrioValido"
+                    [class.is-danger]="zonaBarrioInvalido"
+                    id=""
+                    placeholder="Zona o barrio"
+                    formControlName="zonaBarrio"
+                    name="zonaBarrio"
+                  />
+                  <small *ngIf="zonaBarrioInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label> Dirección</label>
+                  <br />
+                  <input
+                    type="text"
+                    class="form-control"
+                    [class.is-success]="direccionRepValido"
+                    [class.is-danger]="direccionRepInvalido"
+                    id=""
+                    placeholder="Dirección"
+                    formControlName="direccionRep"
+                    name="direccionRep"
+                  />
+                  <small *ngIf="direccionRepInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class=""> Nro.Vivienda</label>
+                  <input
+                    type="number"
+                    class="form-control"
+                    [class.is-success]="nroViviendaValido"
+                    [class.is-danger]="nroViviendaInvalido"
+                    formControlName="nroVivienda"
+                  />
+                  <small *ngIf="nroViviendaInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="referenciaRepValido"
+                  [class.is-danger]="referenciaRepInvalido"
+                >
+                  <label> Referencia</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="referenciaRep"
+                    id="referenciaRep"
+                    formControlName="referenciaRep"
+                  />
+                  <small *ngIf="referenciaRepInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="telefonoRepValido"
+                  [class.is-danger]="telefonoRepInvalido"
+                >
+                  <label> Telefono</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="telefonoRep"
+                    id="telefonoRep"
+                    formControlName="telefonoRep"
+                  />
+                </div>
+                <small *ngIf="telefonoRepInvalido" class="rojo"
+                  >* Es necesario elegir un campo</small
+                >
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="celularRepValido"
+                  [class.is-danger]="celularRepInvalido"
+                >
+                  <label> Celular</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="celularRep"
+                    id="celularRep"
+                    formControlName="celularRep"
+                  />
+                </div>
+                <small *ngIf="celularRepInvalido" class="rojo"
+                  >* Es necesario elegir un campo</small
+                >
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class="">Correo</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    [class.is-success]="correoRepValido"
+                    [class.is-danger]="correoRepInvalido"
+                    formControlName="correoRep"
+                  />
+                  <small *ngIf="correoRepInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="notarioValido"
+                  [class.is-danger]="notarioInvalido"
+                >
+                  <label> Notario</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="text"
+                    name="notario"
+                    id="notario"
+                    formControlName="notario"
+                  />
+                  <small *ngIf="notarioInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="nroNotariaValido"
+                  [class.is-danger]="nroNotariaInvalido"
+                >
+                  <label> Nro. Notaria</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="nroNotaria"
+                    id="nroNotaria"
+                    formControlName="nroNotaria"
+                  />
+                  <small *ngIf="nroNotariaInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div
+                  class="form-group caja"
+                  [class.is-success]="nroPoderRepValido"
+                  [class.is-danger]="nroPoderRepInvalido"
+                >
+                  <label> Nro. Poder Representante Legal</label>
+                  <br />
+                  <input
+                    class="form-control"
+                    type="number"
+                    name="nroPoderRep"
+                    id="nroPoderRep"
+                    formControlName="nroPoderRep"
+                  />
+                  <small *ngIf="nroPoderRepInvalido" class="rojo"
+                    >* Es necesario elegir un campo</small
+                  >
+                </div>
+              </div>
+            </div>
+            <div class="row">
+        
+              <div class="col-md-3">
+                <div class="form-group caja">
+                  <label for="" class=""
+                    >Fecha emisión del poder del representante legal</label
+                  >
+                  <input
+                    type="date"
+                    class="form-control"
+                    [class.is-success]="fechaEmisionPoderValido"
+                    [class.is-danger]="fechaEmisionPoderInvalido"
+                    formControlName="fechaEmisionPoder"
+                  />
+                  <small *ngIf="fechaEmisionPoderInvalido" class="rojo"
+                    >* Es necesario llenar este campo</small
+                  >
+                </div>
+              </div>
+         
+            </div>
+          </div>
+        </div>
+        <div class="btnA">
+          <button
+            class="botonF"
+            (click)="guardarDatosEmpleador($event)"
+          >
+          <i class="fas fa-paper-plane"></i>
+            ENVIAR
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<br /><br /><br /><br /><br />
+<!-- 
+<app-footer></app-footer> -->

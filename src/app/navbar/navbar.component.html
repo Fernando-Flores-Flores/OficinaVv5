@@ -1,0 +1,190 @@
+<div class="container mt-2 imgImagenInicio">
+  <div class="row">
+    <div class="col-12">
+      <img src="../../assets/images/BannersInicio/GESTORABL.png" alt="" />
+    </div>
+  </div>
+</div>
+<hr />
+<!--Inicio Navbar-->
+<div class="container-fluid mt-3 sticky-top">
+ 
+ <!-- <div class="container mt-3 sticky-top">  -->
+  <nav
+    class="navbar navbar-expand-xxl navbar-light menuNavBar"
+    style="border: 1px solid #0ef4fc"
+  >
+    <div class="container-fluid">
+      <a class="navbar-toggler" href="#"
+        ><img
+          class="imgTituloNavVar"
+          src="../../assets/images/BannersInicio/GESTORABL.png"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <img src="../../assets/logos/menu.png" class="imgLogoMenu" />
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav navbar-nav mx-auto mb-2 mb-lg-0">
+          <!--  <li class="nav-item dropdown" *ngFor="let item of titulosMenu"> -->
+          <li class="nav-item dropdown" *ngFor="let item of titulosMenuMetodos">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id=""
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i><img src="{{ item.img }}" class="imgLogo" /></i>
+              {{ item.tit }}
+            </a>
+            <!--Sub-->
+            <ul
+              class="
+                dropdown-menu dropdown-menu-dark
+                animate__animated animate__backInLeft
+              "
+              aria-labelledby="navbarDropdownMenuLink1"
+            >
+              <li *ngFor="let item2 of item.miarray; let i = index">
+                <a
+                  class="dropdown-item"
+                  (click)="redirigir(item2.met)"
+                  id="{{ i + 1 }}"
+                  #valor
+                >
+                  <!-- {{ item2.nomSub }} {{i+1}} -->
+                  {{ item2.nomSub }}
+                </a>
+              </li>
+              <!--   <li *ngFor="let item2 of item.miarray">
+                <a class="dropdown-item">
+                  {{ item2 }}
+                </a>
+              </li> -->
+
+              <!-- 
+              <a class="dropdown-item" target="_blank" (click)='irGCer()'>
+                <i class="now-ui-icons design_bullet-list-67"></i>Registro Asegurado
+              </a>
+              <a class="dropdown-item" (click)='irGCer()'>
+                <i class="now-ui-icons business_chart-pie-36"></i>Certificado de no Registro 
+              </a>
+              <a class="dropdown-item" target="_blank" (click)='irGCer()'>
+                <i class="now-ui-icons design_bullet-list-67"></i>Certificado de Vivencia
+              </a>
+
+ -->
+            </ul>
+          </li>
+
+          <!--         <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i><img src="../../assets/logos/LogoConsultas.png" class="imgLogo" /></i>
+              Consultas
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              <li><a class="dropdown-item" href="#">Control de periodos no pagados<br> (Mora asegurado)</a></li>
+              <li><a class="dropdown-item" href="#">Derechohabientes</a></li>
+              <li><a class="dropdown-item" href="#">Seguimiento de tramites</a></li>
+              <li><a class="dropdown-item" href="#">Seguimiento de solicitudes y reclamos</a></li>
+              <li><a class="dropdown-item" href="#">Recaudación no aclarada</a></li>
+              <li><a class="dropdown-item" href="#">Pagos en excesos</a></li>
+              <li><a class="dropdown-item" href="#">Rezagos</a></li>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i><img src="../../assets/logos/LogoFormulario.png" class="imgLogo" /></i>
+              Formularios
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              
+              <a class="dropdown-item" href="">Pension de Vejez</a>
+              <a class="dropdown-item" target="_blank" href="">Pension de invalidez</a>
+              <a class="dropdown-item" href="#">Retiros minimos</a>
+              <a class="dropdown-item" href="#">Formulario de abono de cuenta</a>
+              <a class="dropdown-item" href="#">Declaración de enfermedad</a>
+              <a class="dropdown-item" href="#">Novedades de Ingreso y retiro (FDNIR)</a>
+              <a class="dropdown-item" >Conformidad de Aportes</a>
+              <a class="dropdown-item" >Devolucion de Aportes - Formulario de Gestion de Observaciones</a>
+              <a class="dropdown-item" >Formulario de registro asegurado y  derechohabientes</a>
+              <a class="dropdown-item" >Formulario de actualización de la información del asegurado,<br> derechohabientes y  exclusión<br> de derechohabientes de segundo grado</a>
+              <a class="dropdown-item" >Formulario de  cotizaciones voluntarias a favor<br> de terceros</a>
+              <a class="dropdown-item" >Formulario de cesación de  cotizaciones voluntarias a <br>favor de terceros</a>
+              <a class="dropdown-item" >Formulario de registro de consultores</a>
+              <a class="dropdown-item" >Formulario de solicitud de certificación de no registro<br> y no deuda para empresas extranjeras no constituidas en el<br> estado plurinacional de bolivia</a>
+              <a class="dropdown-item" >Formulario de  conformidad de aportes</a>
+              <a class="dropdown-item" >Estado de ahorro previsional semestral e histórico</a>
+            </div>
+   
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i><img src="../../assets/logos/LogoPagos.png" class="imgLogo" /></i>
+              Pagos aportes
+            </a>
+            <div class="
+              dropdown-menu dropdown-menu-dark
+              animate__animated animate__backInLeft
+            " aria-labelledby="navbarDropdownMenuLink1">
+              <a class="dropdown-item" href="#">Pago Asegurado Independientes</a>
+              <a class="dropdown-item" href="#">Pago Asegurado Consultor</a>
+              <a class="dropdown-item" href="#">Seguimientos de pago</a>
+            </div>
+       
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i><img src="../../assets/logos/LogoTramites.png" class="imgLogo" /></i>
+              Tramites linea
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              <li><a class="dropdown-item" (click)='irFRSIP()' style="cursor: pointer">Registro al SIP</a></li>
+              <li><a class="dropdown-item" href="#">Estado de ahorro previsional</a></li>
+              <li><a class="dropdown-item" href="#">Conformidad de aportes</a></li>
+              <li><a class="dropdown-item" href="#">Declaracón de derechohabientes</a></li>
+              <li><a class="dropdown-item" href="#">Exclusion de derechohabientes <br>de segundo grado</a></li>
+              <li><a class="dropdown-item" href="#">Devolución de pagos en exceso</a></li>
+              <li><a class="dropdown-item" href="#">Actualizacion de información del Asegurado</a></li>
+              <li><a class="dropdown-item" href="#">Registro de consultores</a></li>
+              <li><a class="dropdown-item" href="#">Ingresar solicitudes y reclamos</a></li>
+            </div>
+          </li>
+         
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+              data-bs-toggle="dropdown" aria-expanded="false">
+              <i><img src="../../assets/logos/LogoAsegurado.png" class="imgLogo" /></i>
+              A. Simuladores
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              <li><a class="dropdown-item" href="#">Pago de independientes</a></li>
+              <li><a class="dropdown-item" href="#">Pago consultores</a></li>
+              <li><a class="dropdown-item" href="#">Asegurado buzón electrónico</a></li>
+            
+
+
+
+
+            </div>
+          </li> -->
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<!--End Navbar-->
+<hr />

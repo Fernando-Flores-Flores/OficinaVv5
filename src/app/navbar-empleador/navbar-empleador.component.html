@@ -1,0 +1,282 @@
+<div class="container mt-2 imgImagenInicio">
+  <div class="row">
+    <!-- 
+    <div class="col-sm-9">
+      -->
+    <div class="col">
+      <img
+        class=""
+        src="../../assets/images/BannersInicio/LogoMenuHeader.png"
+        alt=""
+      />
+    </div>
+    <!--     <div class="col-sm-3 perfil">
+      <img src="../../assets/logos/LogoInicio.png" class="notifica" alt="" />
+      <img src="../../assets/logos/LogoNotify.png" class="notifica" alt="" />
+      <img src="../../assets/logos/LogoPerfil.png" class="notifica" alt="" />
+      <img src="../../assets/logos/LogoSalir.png" class="notifica" alt="" />
+    </div>
+ -->
+  </div>
+</div>
+<hr />
+
+<div class="container-fluid mt-2 sticky-top">
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light">-->
+  <nav class="navbar navbar-expand-lg navbar-light menuNavBar">
+    <!-- <div class="navbar-brand">{{tipo}} </div>
+     -->
+    <div class="container-fluid">
+      <a class="navbar-toggler" href="#"
+        ><img
+          class="imgTituloNavVar"
+          src="../../assets/images/TituloBlancoLit.png"
+      /></a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavDropdown"
+        aria-controls="navbarNavDropdown"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <img src="../../assets/logos/menu.png" class="imgLogoMenu" />
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavDropdown">
+        <ul class="navbar-nav navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i
+                ><img
+                  src="../../assets/logos/LogoCertificacion.png"
+                  class="imgLogo"
+              /></i>
+              Certificaciones
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              <li><a class="dropdown-item" href="#">No adeudo</a></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Datos generales registrados SIP Empleador</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" (click)="irFREmpleador()"
+                  >Registro Empleador</a
+                >
+              </li>
+            </div>
+          </li>
+          <!-- <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdownMenuLink" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i><img src="../../assets/logos/LogoFormulario.png" class="imgLogo" /></i>
+                Formularios
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                <li><a class="dropdown-item" (click)='irFRSIP()'>Registro al SIP</a></li>
+                <li><a class="dropdown-item" href="#">Pension en linea</a></li>
+                <li><a class="dropdown-item" href="#">Consultores</a></li>
+                <li><a class="dropdown-item" href="#">Independientes</a></li>
+                <li><a class="dropdown-item" href="#">Formulario de abono de cuenta</a></li>
+                <li><a class="dropdown-item" href="#">Formulario de pension en linea</a></li>
+              </ul>
+            </li>
+             -->
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle active"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i
+                ><img
+                  src="../../assets/logos/LogoFormulario.png"
+                  class="imgLogo"
+              /></i>
+              Solicitudes
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              <li><a class="dropdown-item">Estado de cuenta empleador</a></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Ingresar solicitudes y reclamos</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Solicita Gestor para tu empresa</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Solicita contraseña para dependientes</a
+                >
+              </li>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle active"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i
+                ><img src="../../assets/logos/LogoPagos.png" class="imgLogo"
+              /></i>
+              Pagos aportes
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Pago Asegurado Independientes</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Pago Asegurado Consultor</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Seguimientos de pago</a>
+              </li>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i
+                ><img src="../../assets/logos/LogoTramites.png" class="imgLogo"
+              /></i>
+              Tramites linea
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Contribuciones de consultores</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Conformidad de aportes</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Declaracón de derechohabientes</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Exclusion de derechohabientes <br />de segundo grado</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Devolución de pagos en exceso</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Actualizacion de información del Asegurado</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Registro de consultores</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Ingresar solicitudes y reclamos</a
+                >
+              </li>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle active"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i
+                ><img
+                  src="../../assets/logos/LogoConsultas.png"
+                  class="imgLogo"
+              /></i>
+              Consultas
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Control de periodos no pagados<br />
+                  (Mora asegurado)</a
+                >
+              </li>
+              <li><a class="dropdown-item" href="#">Derechohabientes</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Seguimiento de tramites</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Seguimiento de solicitudes y reclamos</a
+                >
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Recaudación no aclarada</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Pagos en excesos</a></li>
+              <li><a class="dropdown-item" href="#">Rezagos</a></li>
+            </div>
+          </li>
+          <li class="nav-item dropdown">
+            <a
+              class="nav-link dropdown-toggle active"
+              href="#"
+              id="navbarDropdownMenuLink"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <i
+                ><img
+                  src="../../assets/logos/LogoAsegurado.png"
+                  class="imgLogo"
+              /></i>
+              Asegurado Simuladores
+            </a>
+            <div class="dropdown-menu dropdown-menu-dark animate__animated animate__backInLeft" aria-labelledby="navbarDropdownMenuLink1">
+              <li>
+                <a class="dropdown-item" href="#">Pago de independientes</a>
+              </li>
+              <li><a class="dropdown-item" href="#">Pago consultores</a></li>
+              <li>
+                <a class="dropdown-item" href="#"
+                  >Asegurado buzón electrónico</a
+                >
+              </li>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+</div>
+<hr />

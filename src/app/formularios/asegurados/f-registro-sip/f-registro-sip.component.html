@@ -1,0 +1,644 @@
+<app-navbar></app-navbar>
+<style></style>
+
+<div class="jumbotron jumbotron-fluid">
+  <div class="container animate__animated animate__bounce">
+    <h2 class="line">FORMULARIO DE REGISTRO</h2>
+    <br><br>
+    <p class="lead h2">SISTEMA INTEGRAL DE PENSIONES - SIP</p>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <section class="">
+        <div class="row animate__animated animate__backInLeft animate__delay-1s">
+          <label for="" class="label">
+            <img class="imgLogo" src="../../assets/logos/logoPasos.png" alt="No se encontro el icono" />
+            Siga los siguientes pasos para realizar su registro
+          </label>
+        </div>
+      </section>
+      <div>
+        <div class="progress animate__animated animate__fadeIn" [hidden]="mostrar_1">
+          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 25%" aria-valuenow="25"
+            aria-valuemin="0" aria-valuemax="100">
+            25%
+          </div>
+        </div>
+        <div class="progress animate__animated animate__fadeIn" [hidden]="mostrar_2">
+          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 50%" aria-valuenow="50"
+            aria-valuemin="0" aria-valuemax="100">
+            50%
+          </div>
+        </div>
+        <div class="progress animate__animated animate__fadeIn" [hidden]="mostrar_3">
+          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 75%" aria-valuenow="75"
+            aria-valuemin="0" aria-valuemax="100">
+            75%
+          </div>
+        </div>
+        <div class="progress animate__animated animate__fadeIn" [hidden]="mostrar_4">
+          <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 100%" aria-valuenow="100"
+            aria-valuemin="0" aria-valuemax="100">
+            100%
+          </div>
+        </div>
+      </div>
+      <div class="btnA">
+        <button class="botonF" (click)="anterior()">
+          <img src="../../assets/logos/ant.png" class="imgLogo" />
+          {{ ant }}</button>&nbsp;&nbsp;
+        <button class="botonF" (click)="siguiente()">
+          {{ sig }} <img src="../../assets/logos/sig.png" class="imgLogo" />
+        </button>
+      </div>
+
+      <form action="">
+        <!--Paso 1 Identificacion de asegurado-->
+
+        <div id="paso1" [hidden]="mostrar_1" class="cajaBlanca">
+          <div class="row">
+            <div class="row texto">
+              <div class="col-2">
+                <img src="../../assets/PasosForms/paso1.png" class="imgPasos" alt="no se encontro la imagen" />
+              </div>
+
+              <div class="col-10">
+                <p class="">Identificacion del asegurado</p>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label> Tipo de trabajador</label>
+                <br />
+
+                <div class="form-check">
+                  <label class="form-check-label" for="Tdependiente">Dependiente</label>
+                  <input class="form-check-input" type="radio" name="tipoTrabajador" id="Tdependiente"
+                    value="option1" />
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="Tindependiente">Independiente</label>
+                  <input class="form-check-input" type="radio" name="tipoTrabajador" id="Tindependiente"
+                    value="option2" />
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="Tconsultor">Consultor</label>
+                  <input class="form-check-input" type="radio" name="tipoTrabajador" id="Tconsultor" value="option3" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label>Documento de identidad:</label>
+                <br />
+                <div class="form-check">
+                  <label class="form-check-label" for="inlineRadio1">CI</label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                    value="option1" />
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="inlineRadio2">PAS</label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                    value="option2" />
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="inlineRadio3">CE</label>
+                  <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                    value="option3" />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">
+                  Numero de documento de identidad :</label>
+                <div class="row">
+                  <div class="col-md-12 inlinee">
+                    <input type="number" class="form-control" id="" placeholder="Nro de identificación" />
+                    <input type="text" class="form-control esp" id="" placeholder="complemento" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Primer nombre :</label>
+                <input type="text" class="form-control" id="" placeholder="Primer nombre" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Segundo nombre :</label>
+                <input type="text" class="form-control" id="" placeholder="Segundo nombre" />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Primer Apellido :</label>
+                <input type="text" class="form-control" id="" placeholder="Primer Apellido" />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Segundo apellido :</label>
+                <input type="text" class="form-control" id="" placeholder="Segundo Apeliido" />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Apellido Casada :</label>
+                <input type="text" class="form-control" id="" placeholder="Ap. Casada" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Fecha de nacimiento :</label>
+                <input type="date" class="form-control" />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Nacionalidad :</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Seleccione:</option>
+                  <option value="1">Bolivia</option>
+                  <option value="2">Argentina</option>
+                  <option value="3">Chile</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Genero :</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Seleccione:</option>
+                  <option value="1">Femenino</option>
+                  <option value="2">Masculino</option>
+                  <option value="3">Otros</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Zona :</label>
+                <input type="text" class="form-control" id="" placeholder="Zona" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Departamento :</label>
+                <input type="text" class="form-control" id="" placeholder="Departamento" />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Dirección :</label>
+                <input type="text" class="form-control" id="" placeholder="Dirección" />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Nro. Vivienda :</label>
+                <input type="number" class="form-control" id="" placeholder="0" />
+              </div>
+            </div>
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Referencia :</label>
+                <input type="text" class="form-control" id="" placeholder="Zona" />
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">
+              <div class="form-group caja">
+                <label for="" class="">Correo electrónico :</label>
+                <input type="email" class="form-control" id="" placeholder="ejemplo@gmail.com" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group caja">
+                <label for="" class="">Celular :</label>
+                <input type="number" class="form-control" id="" placeholder="666-666-66" />
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="form-group caja">
+                <label for="" class="">Teléfono fijo :</label>
+                <input type="number" class="form-control" id="" placeholder="2-222-2222" />
+              </div>
+            </div>
+          </div>
+          <div class="row caja">
+            <div class="col-md-8">
+              <p class="label">
+                <strong>AUTORIZACIÓN USO DE MEDIOS ELECTRÓNICOS:</strong>
+                El asegurado acepta y autoriza de manera expresa que la Gestora
+                envíe notificaciones, estados de ahorro y demás comunicaciones
+                relacionadas con sus trámites y/o solicitudes a través de
+                técnicas y medios electrónicos, informáticos y telemáticos
+                (incluye correo electrónico, página web y mensaje móvil).
+              </p>
+            </div>
+            <div class="col-md-4 cen">
+              <div class="form-check-inline sino">
+                &nbsp;
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" />
+                <label class="form-check-label" for="flexRadioDefault1">
+                  &nbsp;SI&nbsp;&nbsp;&nbsp;
+                </label>
+                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked />
+                <label class="form-check-label" for="flexRadioDefault2">
+                  &nbsp;NO
+                </label>
+              </div>
+            </div>
+          </div>
+          <div class="row caja">
+            <p class="label">
+              En caso de ser negativo, seleccione el lugar para el envío de
+              notificaciones físicas y demás comunicaciones.
+            </p>
+            <div class="form-check-inline">
+              &nbsp;
+              <input class="form-check-input" type="radio" name="radio" id="checkResidencia" />
+              <label class="form-check-label" for="checkResidencia">
+                &nbsp;Residencia&nbsp;&nbsp;&nbsp;
+              </label>
+              <input class="form-check-input" type="radio" name="radio" id="checkEmpleador" checked />
+              <label class="form-check-label" for="checkEmpleador">
+                &nbsp;Empleador
+              </label>
+            </div>
+          </div>
+        </div>
+
+        <!--Paso 2 Derechohabientes-->
+
+        <div id="paso2" [hidden]="mostrar_2" class="cajaBlanca">
+          <div class="row texto">
+            <div class="col-md-2">
+              <img src="../../assets/PasosForms/paso2.png" class="imgPasos" alt="no se encontro la imagen" />
+            </div>
+
+            <div class="col-md-7">
+              <p class="">Derechohabientes</p>
+            </div>
+            <div class="col-md-3">
+              <a class="btn btn-outline-info" (click)="agregarDerecho()">
+                Anadir <i class="fa fa-plus-circle"></i>
+              </a>
+            </div>
+          </div>
+
+          <div formArrayName="telefonos" *ngFor="let telefono of telefonos.controls; let i = index">
+            <div [formGroupName]="i">
+              <!--  <div class="form-group row">
+                <label class="col-md-3" [attr.for]="'telefono' + i"
+                  >Teléfono</label
+                >
+                <div class="col-md-3">
+                  <input
+                    type="text"
+                    [attr.id]="'telefono' + i"
+                    class="form-control"
+                    formControlName="telefono"
+                  />
+                </div>
+                <label class="col-md-3" [attr.for]="'descripcion' + i"
+                  >Descripción</label
+                >
+                <div class="col-md-3">
+                  <input
+                    type="text"
+                    [attr.id]="'descripcion' + i"
+                    class="form-control"
+                    formControlName="descripcion"
+                  />
+                </div>
+                <div class="col-md-2">
+                  <button
+                    class="btn btn-outline-info"
+                    (click)="removerTelefono(i)"
+                  >
+                    Remover
+                  </button>
+                </div>
+              </div> -->
+            </div>
+          </div>
+          <div class="form-group animate__animated animate__fadeIn" formArrayName="telefonos"
+            *ngFor="let telefono of telefonos.controls; let i = index">
+            <div>
+              <div class="row">
+                <div class="col">
+                  <h4 class="">Derechohabientes</h4>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="labelFormTitulo">Parentesco</label>
+                    <div class="">
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipoDeclaracion" id="flexRadioDefault1" />
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Conyuge
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipoDeclaracion" id="flexRadioDefault2"
+                          checked />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Hijo
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipoDeclaracion" id="flexRadioDefault2"
+                          checked />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Padre
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipoDeclaracion" id="flexRadioDefault2"
+                          checked />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Madre
+                        </label>
+                      </div>
+                      <div class="form-check">
+                        <input class="form-check-input" type="radio" name="tipoDeclaracion" id="flexRadioDefault2"
+                          checked />
+                        <label class="form-check-label" for="flexRadioDefault2">
+                          Hermano
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label>Documento de identidad:</label>
+                    <br />
+                    <div class="form-check">
+                      <label class="form-check-label" for="inlineRadio1">CI</label>
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                        value="option1" />
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label" for="inlineRadio2">PAS</label>
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                        value="option2" />
+                    </div>
+                    <div class="form-check">
+                      <label class="form-check-label" for="inlineRadio3">CE</label>
+                      <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3"
+                        value="option3" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="">
+                      Numero de documento de identidad :</label>
+                    <div class="row">
+                      <div class="col-md-12 inlinee">
+                        <input type="number" class="form-control" id="" placeholder="Nro de identificación" />
+                        <input type="text" class="form-control esp" id="" placeholder="complemento" />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="">Primer nombre :</label>
+                    <input type="text" class="form-control" id="" placeholder="Primer nombre" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="">Segundo nombre :</label>
+                    <input type="text" class="form-control" id="" placeholder="Segundo nombre" />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="">Primer Apellido :</label>
+                    <input type="text" class="form-control" id="" placeholder="Primer Apellido" />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="">Segundo apellido :</label>
+                    <input type="text" class="form-control" id="" placeholder="Segundo Apeliido" />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="">Apellido Casada :</label>
+                    <input type="text" class="form-control" id="" placeholder="Ap. Casada" />
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="">Genero :</label>
+                    <select class="form-select" aria-label="Default select example">
+                      <option selected>Seleccione:</option>
+                      <option value="1">Femenino</option>
+                      <option value="2">Masculino</option>
+                      <option value="3">Otros</option>
+                    </select>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="">Fecha de nacimiento :</label>
+                    <input type="date" class="form-control" />
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <div class="form-group caja">
+                    <label for="" class="labelFormTitulo">CUA</label>
+                    <div class="">
+                      <input type="text" class="form-control" id="" placeholder="Código" />
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                  <button class="btn btn-outline-info" (click)="removerTelefono(i)">
+                    Remover
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--Paso 3 Datos laboraleso-->
+
+        <div id="paso3" [hidden]="mostrar_3" class="cajaBlanca">
+          <div class="row">
+            <!-- Titulo Del paso -->
+            <div class="row texto">
+              <div class="col-2">
+                <img src="../../assets/PasosForms/paso3.png" class="imgPasos" alt="no se encontro la imagen" />
+              </div>
+
+              <div class="col-10">
+                <p class="">Datos laborales</p>
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Profesión:</label>
+                <input type="text" class="form-control" id="" placeholder="Profesión" />
+              </div>
+            </div>
+
+            <div class="col-md-3">
+              <div class="form-group caja">
+                <label for="" class="">Ocupación:</label>
+                <input type="text" class="form-control" id="" placeholder="Ocupación" />
+              </div>
+            </div>
+
+            <div class="col-md-4">
+              <div class="form-group caja">
+                <label for="" class="">Fecha inicio relación laboral :</label>
+                <input type="date" class="form-control" />
+              </div>
+            </div>
+
+            <div class="col-md-2">
+              <div class="form-group caja">
+                <label for="" class="">Pertenece al sector :</label>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="sector" id="sectorPublico" />
+                  <label class="form-check-label" for="sectorPublico">
+                    Publico
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="sector" id="sectorPrivado" checked />
+                  <label class="form-check-label" for="sectorPrivado">
+                    Privado
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Paso 4 Datos del empleador e inscripción cuenta de entidad financiera-->
+        <div id="paso4" [hidden]="mostrar_4" class="cajaBlanca">
+          <div class="row">
+            <!-- Titulo Del paso -->
+            <div class="row texto">
+              <div class="col-2">
+                <img src="../../assets/PasosForms/paso4.png" class="imgPasos" alt="no se encontro la imagen" />
+              </div>
+
+              <div class="col-10">
+                <p class="">
+                  Datos del empleador e inscripción cuenta de entidad financiera
+                </p>
+              </div>
+            </div>
+            <h3>Datos del empleador</h3>
+            <div class="col-md-6">
+              <div class="form-group caja">
+                <label for="" class="">Tipo de identificación:</label>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="detipIden" id="empleNIT" checked />
+                  <label class="form-check-label" for="empleNIT"> NIT </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="detipIden" id="empleGOB" checked />
+                  <label class="form-check-label" for="empleGOB"> GOB </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" name="detipIden" id="empleSUP" />
+                  <label class="form-check-label" for="empleSUP"> SUP </label>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group caja">
+                <label for="" class="">Número de identificación:</label>
+                <input type="number" class="form-control" id="" placeholder="Nro identificación" />
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <h3>Inscripción cuenta de entidad financiera</h3>
+            <div class="col-md-6">
+              <div class="form-group caja">
+                <label for="" class="">Entidad financiera:</label>
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Selecciona un EF</option>
+                  <option value="1">Banco Union</option>
+                  <option value="2">Banco Mercantil</option>
+                  <option value="3">Banco FIE</option>
+                  <option value="4">Ecofuturo</option>
+                  <option value="5">Cooperativa Santisima trinidad</option>
+                  <option value="6">Banco FIE</option>
+                </select>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-group caja">
+                <label for="" class="">Número de cuenta:</label>
+                <input type="number" class="form-control" id="" placeholder="Nro de cuenta" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+
+      <div class="wrap">
+        <div class="tarjeta-wrap p1" #paso1 style="margin: 0 10px 0 10px">
+          <div class="tarjeta">
+            <div class="adelante card1"></div>
+            <div class="atras card1b"></div>
+          </div>
+        </div>
+        <div class="tarjeta-wrap" #paso2 style="margin: 0 10px 0 10px">
+          <div class="tarjeta">
+            <div class="adelante card2"></div>
+            <div class="atras card2b"></div>
+          </div>
+        </div>
+        <div class="tarjeta-wrap" #paso3 style="margin: 0 10px 0 10px">
+          <div class="tarjeta">
+            <div class="adelante card3"></div>
+            <div class="atras card3b"></div>
+          </div>
+        </div>
+        <div class="tarjeta-wrap" #paso4 style="margin: 0 20px 0 20px">
+          <div class="tarjeta">
+            <div class="adelante card4"></div>
+            <div class="atras card4b"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<app-footer></app-footer>

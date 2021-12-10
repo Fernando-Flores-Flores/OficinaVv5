@@ -1,0 +1,11 @@
+@import url(./../formularios/asegurados/f-registro-sip/f-registro-sip.component.css);
+
+.is-danger{
+    border: 2px solid rgb(240, 24, 24);
+}
+.is-success{
+    border: 1px solid rgb(24, 240, 229);
+}
+.rojo{
+    color: brown;
+}

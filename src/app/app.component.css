@@ -1,0 +1,211 @@
+.colores {
+  color: #003b77, #0a2e71, #518aae, #6b9ab8;
+  background: #209cd0, #44a4d4, #9ec7e3, #aed1e5;
+  color: #9dcfda, #a8d4e1, #c2e0e8, #cae1e7;
+}
+/********************************************** CONTENEDORES ****************************************/
+.contenedorBlanco {
+  background: #ffffff;
+  padding: 5px;
+  border-radius: 20px;
+}
+/*Botones*/
+.btn-outline-info:hover {
+  background: #fff;
+  border-radius: 30px;
+}
+.btn-outline-info {
+  background: -webkit-radial-gradient(
+    bottom right,
+    rgba(11, 34, 109, 0.849),
+    #0e6192
+  );
+  width: 400px;
+  font-size: 16px;
+  border-radius: 30px;
+  margin-top: 10px;
+}
+.btnA {
+  align-items: center;
+  margin: auto;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+/* @media screen and (max-width: 780px) {
+ 
+  }
+} */
+/*////////////                           TITULO                     //////////////*/
+.line {
+  display: inline-block;
+  position: relative;
+}
+.line::after,
+.line::before {
+  content: "";
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: block;
+  top: 0.6em;
+  background-color: currentColor;
+  transform: scale(0);
+  transition: all 0.2s ease-in;
+}
+
+.imgLogo {
+  width: 40px;
+  height: 35px;
+}
+
+h2 {
+  color: transparent;
+  margin: auto;
+  font-size: 40px;
+  /*background: #9DCFDA;*/
+  background-position: center;
+  background-size: cover;
+  -webkit-text-stroke: 1px #ffffff;
+  padding: 20px;
+  /* background: #003b77;
+   */
+  background: -webkit-radial-gradient(
+    bottom right,
+    rgba(11, 34, 109, 0.849),
+    #0e6192
+  );
+  border-radius: 15px;
+  text-align: center;
+  width: 100%;
+  border: 2px solid #00203d;
+}
+.ico {
+  color: #ffffff;
+}
+@media screen and (max-width: 780px) {
+  h2 {
+    color: transparent;
+    margin: auto;
+    font-size: 25px;
+    background-position: center;
+    background-size: cover;
+    -webkit-text-stroke: 1px #ffffff;
+    /*   border: 1px solid#9DCFDA; */
+    padding: 20px;
+    background: rgba(0, 31, 61, 0.63);
+    border-radius: 15px;
+  }
+}
+.line:hover::before,
+.line:hover::after {
+  transform: scale(1);
+}
+.line::before {
+  left: -105px;
+}
+.line::after {
+  right: -105px;
+}
+.jumbotron {
+  color: #003b77;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.label {
+  background: #f4f4f4;
+  padding: 10px;
+  color: #0a2e71;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 15px;
+  max-width: 90%;
+}
+@media screen and (max-width: 600px) {
+  .label {
+    background: #f4f4f4;
+    padding: 5px;
+    margin-bottom: 6px;
+    color: #0a2e71;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 700;
+    text-indent: 3px;
+    max-width: 90%;
+  }
+}
+/*/FORMULARIOS/*/
+
+.caja {
+  border: 2px solid #003b77;
+  /*  background: #cae1e7;
+ */
+  background: #aed1e590;
+  border-radius: 10px;
+  padding: 3px;
+  height: 100%;
+  margin-top: 10px !important ;
+  margin-bottom: 10px !important;
+  color: #00203d;
+  font-weight: 600;
+}
+
+/******************TABLAS***************************************/
+table {
+  border: 2px solid #003b77;
+  background: #cae1e7;
+  border-radius: 10px;
+  padding: 3px;
+  margin-top: 10px !important ;
+  margin-bottom: 10px !important;
+  color: #00203d;
+  /* max-width: 500px; */
+  margin: auto;
+}
+.tituloTabla {
+  background: #003b77;
+  color: #cae1e7;
+}
+.labelTituloTablas {
+  font-size: large;
+  text-align: center;
+  margin: auto;
+  background: #00203d;
+}
+/******************TABLAS FIN***************************************/
+/****************** CERTIFICADOS ***************************************/
+
+.pdfview {
+  /* Centrado */
+  margin: auto;
+  display: block;
+  /* Tamaño */
+  width: 80%;
+  height: 70vh;
+  /* Mejorar aspecto */
+  border-radius: 20px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid #012a53;
+}
+/**************************************************************************************************/
+.botonF {
+  text-size-adjust: 20px;
+  letter-spacing: 1px;
+  font-weight: 800;
+  color: white;
+  padding: 10px;
+  border: 2px solid #fff;
+  background: linear-gradient(to bottom, #0c78a4, #0a2e71 40%, #0b80aa);
+  border-radius: 30px;
+  box-shadow: 3px 3px 1px 1px rgba(7, 7, 7, 0.337);
+  margin-bottom: 20px;
+  margin-top: 10px;
+}
+.botonF:hover {
+  color: #0a2e71;
+  border: 2px solid #0a2e71;
+  background: linear-gradient(to bottom, #9dcfda, #feffff, #9dcfda);
+  transform: translate(6px, 1px) !important;
+}

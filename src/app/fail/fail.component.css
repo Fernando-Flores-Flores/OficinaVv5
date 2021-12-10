@@ -1,0 +1,269 @@
+
+.imgLogo {
+    width: 40px;
+    height: 40px;
+  }
+
+  
+  /* el css de abajo oculta las flechas del campo INPUT=NUMBER   */
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  
+  .labelFormTitulo {
+    padding: 5px;
+    color: rgb(26, 13, 77);
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    max-width: 90%;
+    margin-bottom: 5px;
+  }
+  .labelFormContenido {
+    background: rgb(255, 255, 255);
+    border-radius:5px;
+    padding: 2px;
+  }
+  
+  @media screen and (max-width: 600px) {
+   /*  .label {
+      background: #f4f4f4;
+      padding: 5px;
+      margin-bottom: 6px;
+      color: rgb(26, 13, 77);
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 900;
+      text-indent: 3px;
+      max-width: 90%;
+    } */
+  }
+  .jumbotron {
+    color: #ffffff;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+  }
+  .pruebas {
+    background: #3efdfd;
+    padding: 10px;
+    border: 5px solid #dfffff;
+  }
+  
+ /*  .caja {
+    border: 2px solid #00203d;
+    background: #CAE1E7;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    padding: 7px;
+  }
+  .cajaBlanca {
+    background: rgb(255, 255, 255);
+    border-radius: 10px;
+    padding: 10px;
+  
+  } */
+  .tituloPaso {
+    background: #225689;
+    padding: 10px;
+    margin: auto;
+    color: #f0ffff;
+    border-radius: 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    text-align: center;
+    width: 95%;
+    text-decoration: overline;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .margen {
+    border-radius: 20px;
+    background: linear-gradient(70deg, #034685, #0099d015);
+    padding: 10px;
+  }
+  .margenDiv {
+    border-color: #009ad0;
+    border-radius: 20px;
+    background: -webkit-linear-gradient(top, #fff 20%, #001e3d);
+    padding: 10px;
+  }
+  
+  /*TITULOS TARJETA*/
+  .imgPasos {
+    width: 50px;
+    height: 50px;
+    background-color: #00203d;
+    margin: auto;
+    border-radius: 50% / 65% 65% 40% 40%;
+   
+  }
+  .cont {
+    max-width: 100%;
+    margin-bottom: 10px;
+    background: #1F4E78;
+    border-style: none;
+    align-items: center;
+    border-radius: 10px;
+    
+  }
+  
+  .subtitulo {
+    color: #ffff;
+    margin: 0 auto;
+    text-align: center;
+    font-weight: 900;
+    font: 21px Roboto, sans-serif; 
+    padding: 10px;
+  
+    
+   }
+   .botton{
+    align-items: center;
+    margin: 0 auto;
+   }
+  
+  /***************************Tarjetas de pasos********************************/
+  
+  /* 
+  *{
+      margin: 0;
+      padding: 0;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      box-sizing: border-box;
+  } */
+  /*Posicion vertical*/
+  .wrap {
+    width: 100%;
+    margin: 20px auto;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+  
+  /* .tarjeta-wrap{
+      margin: 5px;
+      -webkit-perspective: 800;
+      perspective: 800;
+  } */
+  
+  .tarjeta {
+    width: 100px;
+    height: 100px;
+    /* background: #0099d017;
+       */
+    position: relative;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    -webkit-transition: 0.7s ease;
+    transition: 0.7s ease;
+    /*	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+   */
+    box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.2);
+    border-radius: 30%;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .tarjeta {
+      width: 50px;
+      height: 50px;
+      /* background: #0099d017;
+           */
+      position: relative;
+      -webkit-transform-style: preserve-3d;
+      transform-style: preserve-3d;
+      -webkit-transition: 0.7s ease;
+      transition: 0.7s ease;
+      /*	-webkit-box-shadow: 0px 10px 15px -5px rgba(0,0,0,0.65);
+       */
+      box-shadow: 0px 10px 15px -5px rgba(0, 0, 0, 0.2);
+      border-radius: 30%;
+    }
+  }
+  
+  .adelante,
+  .atras {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+  
+  /* .adelante{
+      width: 100%;
+  }
+   */
+  .atras {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+    background: #00203d;
+    border-radius: 30%;
+    padding: 15px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+  
+  .tarjeta-wrap:hover .tarjeta {
+    -webkit-transform: rotateY(180deg);
+    transform: rotateY(180deg);
+  }
+  
+  .card1 {
+    background-image: url(../../assets/PasosForms/paso1.png);
+    background-size: cover;
+  }
+  
+  .card2 {
+    background-image: url(../../assets/PasosForms/paso2.png);
+    background-size: cover;
+  }
+  
+  .card3 {
+    background-image: url(../../assets/PasosForms/paso3.png);
+    background-size: cover;
+  }
+  .card4 {
+    background-image: url(../../assets/PasosForms/paso4.png);
+    background-size: cover;
+  }
+  .card1b {
+    background-image: url(../../assets/PasosForms/paso1bl.png);
+    background-size: cover;
+  }
+  
+  .card2b {
+    background-image: url(../../assets/PasosForms/paso2bl.png);
+    background-size: cover;
+  }
+  
+  .card3b {
+    background-image: url(../../assets/PasosForms/paso3bl.png);
+    background-size: cover;
+  }
+  .card4b {
+    background-image: url(../../assets/PasosForms/paso4bl.png);
+    background-size: cover;
+  }
+  

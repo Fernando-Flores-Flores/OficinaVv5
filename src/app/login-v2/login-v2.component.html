@@ -1,0 +1,57 @@
+
+
+  <div class="container centrarDiv animate__animated animate__fadeIn mt-5">
+    <div class="card-header text-center ">
+      <img src="../../assets/banner/gestoraCirculo.png" class="logoCirculo animate__animated animate__flip animate__delay-1s" alt="" />
+    </div>
+
+    <div class="card-body margen">
+      <h5 class="titulo">BIENVENIDO A NUESTRA OFICINA VIRTUAL</h5>
+      <form class=""><br>
+        <div class="col">
+          <div class="form-group1 col-lg-10 label">
+
+            <label for="">Forma de identificación:</label>
+
+            <select class="form-select" aria-label="Default select example">
+
+              <option selected>Selecciona una opción</option>
+              <option value="1">NIT</option>
+              <option value="2">CUA</option>
+              <option value="3">CI</option>
+              <option value="4">RUN</option>
+              <option value="5">CE</option>
+              <option value="6">PAS</option>
+              <option value="7">RUC</option>
+              <option value="8">SUP</option>
+              <option value="9">GOB</option>
+            </select>
+            <div id="emailHelp" class="form-text texto">
+              Ingrese la forma de idetificación
+            </div>
+          </div>
+          <br>
+          <div class="form-group1 col-lg-10 label">
+            <label for="" class="">Numero de identificación:</label>
+            <input type="number" class="form-control" id="" placeholder="Nro de identificación" />
+            <div id="emailHelp" class="form-text texto">
+              Ingrese su numero de identificación
+            </div>
+          </div>
+          <br>
+          <div class="form-group1 col-lg-10 label">
+            <label for="inputPassword4">PIN o contraseña</label>
+
+            <input type="password" class="form-control" id="" placeholder="Contraseña" />
+            <div id="emailHelp" class="form-text texto">Ingrese su contraseña</div>
+          </div>
+          <br>
+          <div>
+            <button class="botonF" type="submit" (click)="irAsegurado()"><i class="fas fa-sign-in-alt"></i> INICIAR SESION</button>
+
+            <div id="emailHelp" class="form-text texto">Olvido su pin <a href="#">recuperar</a></div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>

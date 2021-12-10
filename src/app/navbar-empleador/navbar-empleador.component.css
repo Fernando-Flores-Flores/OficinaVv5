@@ -1,0 +1,92 @@
+.imgLogo {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .imgLogoMenu {
+    width: 40px;
+    height: 40px;
+  }
+  
+  .imgLogoMenu:hover{
+    background: #00ffff;
+    color: aliceblue;
+   border-radius: 5px;
+  
+  }
+  
+  .imgImagenInicio img {
+    width: 300px;
+    height: 100px;
+    display: block;
+    margin: auto;
+  }
+  .imgTituloNavVar {
+    width: 200px;
+    height: 60px;
+    
+  
+  }
+  .menuNavBar {
+    /* background:rgba(14, 98, 146, 0.8)
+      background:-webkit-linear-gradient(white, #0e6192 95%);
+  
+      ;*/
+    /* background: -webkit-radial-gradient(bottom right,rgba(70, 106, 223, 0.562),#0e6192 70%);
+     */
+    background: -webkit-radial-gradient(right,rgba(3, 15, 56, 0.562),#0e6192 20%);
+    
+    margin: 4px solid rgb(27, 228, 211) !important;
+    border-radius: 10px;
+  }
+  .borde{
+  
+    border: 4px solid #0ef4fc;
+}
+  li a {
+    color: white !important;
+    font-size: 16px;
+   }
+   li a:hover {
+    color: rgba(255, 255, 255, 0.87) !important;
+    font-size: 16px;
+    background: #1c3566;
+    border-radius: 5%;
+    border: 4px solid rgb(27, 228, 211);
+  }
+  ul li ul li{
+    background: -webkit-radial-gradient(bottom right,rgba(70, 106, 223, 0.562),#0e6192 60%);
+    color: white !important;
+    padding: 6px;
+    margin: 3px;
+    border-right: 3px solid#1c3566;
+    border-radius:  5px;
+    cursor: pointer;
+  }
+  
+  
+  
+  /***************************Hover**********************/
+  
+  .notifica{
+    width: 50px !important;
+    height: 50px !important;
+    margin: auto;
+  }
+  .perfil{
+      display: flex;
+      align-items: center;
+      padding: 5px;
+   
+  }
+  .margen{
+    border: 5px solid black;
+  }
+  /*******************3 nov 2021*************/
+  
+div .dropdown-menu-dark{
+  background-color:#012a53 ;
+  border-radius: 10px;
+  border: 4px solid rgb(27, 228, 211);
+
+}

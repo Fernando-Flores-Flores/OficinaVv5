@@ -1,0 +1,28 @@
+.colores {
+  color: #003b77, #004f84, #518aae, #6b9ab8;
+  background: #209cd0, #44a4d4, #9ec7e3, #aed1e5;
+  color: #9dcfda, #a8d4e1, #c2e0e8, #cae1e7;
+}
+body {
+ /*  background: linear-gradient(to bottom, #6b9ab8 10%, #209cd0 50%, #cae1e7)
+    no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-family: "Roboto", sans-serif; */
+
+  /* background: linear-gradient(to bottom,#003B77, white 80%, #2B79A0);
+  */
+}
+
+/*  body{
+  background: -webkit-linear-gradient(top,#001E3D  ,#003B77) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+} */
+body{
+  background: radial-gradient( #44a4d4,#003b77);
+}

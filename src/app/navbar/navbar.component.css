@@ -1,0 +1,86 @@
+.imgLogo {
+  width: 35px;
+  height: 35px;
+}
+
+.imgLogoMenu {
+  width: 35px;
+  height: 35px;
+}
+
+.imgLogoMenu:hover{
+  background: #00ffff;
+  color: aliceblue;
+ border-radius: 5px;
+
+}
+
+.imgImagenInicio img {
+  display: block;
+  width: 350px;
+  height: 130px;
+  display: block;
+  margin: auto;
+}
+.imgTituloNavVar {
+  width: 200px;
+  height: 60px;
+  
+
+}
+.menuNavBar {
+  background: -webkit-radial-gradient(bottom right,rgba(11, 34, 109, 0.849),#0e6192);
+  margin: 2px solid black !important;
+  border-radius: 10px;
+  border: 2px solid black;
+}
+li a {
+  color: white !important;
+  font-size: 14px;
+ }
+ li a:hover {
+  color: rgba(255, 255, 255, 0.87) !important;
+  background: #00203D;
+  border: 1px solid #00ffff;
+  padding-left: 20px 
+}
+
+ ul li ul li{
+ 
+  color: white !important;
+  padding: 6px;
+  margin: 3px;
+
+  cursor: pointer;
+}
+
+ul li ul li:hover{
+  border-right: 3px solid#1c3566;
+  border-radius:  5px;
+} 
+
+
+/***************************Hover**********************/
+
+.notifica{
+  width: 40px !important;
+  height: 40px !important;
+  margin: auto;
+}
+.perfil{
+    display: flex;
+    align-items: center;
+    color: #0dd5f0;
+   
+}
+
+div .dropdown-menu-dark{
+   background-color:#003B77;
+   border-radius: 10px;
+  border: 1px solid #00ffff;
+
+}
+a{
+  cursor: pointer;
+}
+
