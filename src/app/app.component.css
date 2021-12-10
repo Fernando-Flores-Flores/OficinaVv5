@@ -60,16 +60,15 @@
 }
 
 h2 {
-  color: transparent;
+/*   color: transparent;
+ */  color: #cae1e7;
   margin: auto;
   font-size: 40px;
-  /*background: #9DCFDA;*/
   background-position: center;
   background-size: cover;
   -webkit-text-stroke: 1px #ffffff;
+  /* -webkit-text-stroke: 1px #0a2e71; */
   padding: 20px;
-  /* background: #003b77;
-   */
   background: -webkit-radial-gradient(
     bottom right,
     rgba(11, 34, 109, 0.849),
@@ -80,6 +79,22 @@ h2 {
   width: 100%;
   border: 2px solid #00203d;
 }
+.titulo {
+  color: transparent;
+  margin: auto;
+  font-size: 30px;
+  /*background: #9DCFDA;*/
+  background-position: center;
+  background-size: cover;
+  -webkit-text-stroke: 1px #003b77;
+  font-weight: 900;
+
+  color: #cae1e7;
+  padding: 10px;
+  text-align: center;
+  width: 100%;
+}
+
 .ico {
   color: #ffffff;
 }

@@ -2,8 +2,7 @@
 .titulo {
   color: transparent;
   margin: auto;
-  font-size: 30px;
-  /*background: #9DCFDA;*/
+  font-size: 33px;
   background-position: center;
   background-size: cover;
   -webkit-text-stroke: 1px #003b77;
@@ -16,7 +15,7 @@
 }
 
 .logoCirculo {
-  max-width: 200px;
+  max-width: 300px;
 }
 .centrarDiv {
   width: 60%;
@@ -53,4 +52,10 @@ select {
     padding: 40px;
     margin: auto;
   }
+  .logoCirculo {
+    max-width: 200px;
+  }
+  .titulo {
+    font-size: 25px;
+   }
 }

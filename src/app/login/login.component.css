@@ -23,18 +23,15 @@ p {
     margin: auto;
   }
 }
-
 td {
   color: #003b77;
+  font-weight: 800;
 }
-
 /**************************************************************************/
-
 .box {
   width: 90%;
-  background: rgba(1, 42, 83) ;
-
-  padding: 20px;
+  background: rgba(1, 42, 83, 0.356) ;
+  padding: 10px;
   text-align: center;
   margin: 0 auto;
   margin-top: 4%;
@@ -48,54 +45,23 @@ td {
 /*************** INPUT FILE *************************/
 .file-select input[type="file"] {
   opacity: 0;
-  width: 140px;
-  height: 32px;
+  width: 120px;
+  height: 30px;
   display: inline-block;
-  padding: 3px;
-  
-}
-
-/*  #src-file1::before {
-    content: 'Cambiar foto';
-  } */
+ }
 .file-select::before {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 3px;
-  content: "Seleccionar foto"; /* testo por defecto */
+  content: "Seleccionar"; /* testo por defecto */
   position: absolute;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
-  padding-left:20px ;
+
 }
 .file-select {
   position: relative;
   display: inline-block;
-}
-/* .botton {
-  align-items: center;
-  margin: auto;
-  text-align: center;
-  border: 1px solid rgb(70, 222, 228);
-  border-radius: 15px;
-  background: #001e3d;
-  
-} */
-
-/* .btn-outline-info {
-  background: #001e3d;
-  color: #9DCFDA;
-} */
-/* .botton:hover,.btn-outline-info:hover {
-  background: rgb(4, 224, 240);
-  border-radius: 30px;
-  transform: scale(1.1);
-  color: #001e3d;
-} */
-.imgLogo {
-  width: 20px;
-  height: 20px;
 }
